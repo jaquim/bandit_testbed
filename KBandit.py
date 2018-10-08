@@ -29,7 +29,6 @@ class KBandit:
 	timesteps: int = 20000
 	scale: float = 2
 	optimism: float = None
-	stationary: bool = False
 	epsilon: float = None
 	approximation: pd.DataFrame() = None
 	expanded_mean: pd.DataFrame() = None

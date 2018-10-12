@@ -92,7 +92,7 @@ class KBandit:
 		self.expanded_mean = self.approximation.expanding().mean()
 
 
-	def plot_mean(self, last=False):
+	def plot_mean(self, last: bool = False):
 		"""Fill in a 4x4 subplot figure, 1 for every k (4<k<21) """
 		plt.subplot(4, 4, (self.bandit-5)+1)
 		plt.ylim(0, 12)

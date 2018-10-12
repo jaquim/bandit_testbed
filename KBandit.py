@@ -116,7 +116,6 @@ def plot_param_dependence():
 	the value for their controlling parameter as seen in Sutton and Barto, Ch.2
 
 	"""
-
 	param_values = [1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2, 1, 2, 4]
 	ucb_values, egreedy_values, optEGreedy_values  = list(), list(), list()
 	timesteps = 1000
@@ -158,7 +157,6 @@ def plot_expanding_mean(param=1/4, timesteps=10000):
 	"""
 		Plot the growth of the average reward for a specified parameter and timesteps
 	"""
-	
 	plt.clf()
 	# formatting stuff
 	plt.rcParams['figure.subplot.left'] = 0.09

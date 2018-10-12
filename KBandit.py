@@ -1,7 +1,7 @@
 '''
     File name: KBandit.py
     Author: Jaquim Cadogan
-    Date created: 5-8-18
+    Date created: 5-10-18
     Python Version: 3.7 (!)
 '''
 

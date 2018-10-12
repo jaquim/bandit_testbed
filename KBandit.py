@@ -145,7 +145,7 @@ def plot_param_dependence():
 	plt.plot(np.arange(len(param_values)), optEGreedy_values, label=r'Optimistic $\epsilon$-greedy ($\epsilon$=0.1) ($Q_{0}$)')
 	plt.plot(np.arange(len(param_values)), egreedy_values, label=r'$\epsilon$-greedy ($\epsilon$)')
 	plt.xticks(np.arange(len(param_values)), [r'$\frac{1}{128}$', r'$\frac{1}{64}$', r'$\frac{1}{32}$', r'$\frac{1}{16}$',\
-											  r'$\frac{1}{8}$', r'$\frac{1}{4}$', r'$\frac{1}{2}$', '1', '2', '4'])
+			r'$\frac{1}{8}$', r'$\frac{1}{4}$', r'$\frac{1}{2}$', '1', '2', '4'])
 	plt.xlabel(r'$\epsilon$, $c$, $Q_{0}$')
 	plt.suptitle(r'Average reward over first' + '\n' + '1000 iterations ' + r'($k$=10)' , fontweight='bold')
 	plt.ylabel(r'Average reward')
@@ -211,8 +211,8 @@ def plot_rewards_distribution():
 	"""
 		In order to visualize what the distributions of the arms look like for varying K.
 		Note that the closer the means for certain arms are, the lower the KL-divergence is.
-	    A nice way to explain for example an equal performance of UCB and optimistic egreedy,
-		or even an outperformance of optimistic egreed sometimes.
+		A nice way to explain for example an equal performance of UCB and optimistic egreedy,
+		or even an outperformance of optimistic egreedy.
 	
 	"""
 	plt.clf()
@@ -227,15 +227,15 @@ def plot_rewards_distribution():
 	plt.rcParams['figure.subplot.hspace'] = 0.34
 	plt.rcParams["figure.figsize"] = [35, 10]
 
-	# sample for every arm, for every k to estimate its distribution
+	# sample for every arm, for every k 
+	# to estimate its distribution
 	for k in range(5, 21):
-		print(k) # to indicate how far we are (takes a while, leaving it here delibaretly.
+		print(k) # to indicate how far we are (takes a while, leaving it here delibaretly)
 		plt.subplot(4, 4, (k-5)+1)
 
 		UCB = KBandit(algorithm='ucb', bandit=k, scale=1/4, timesteps=10000)
 		UCB.initialize()
 
-		# do the actual draws
 		draws = list()
 		for draw in range(100000):
 			draw = list()
